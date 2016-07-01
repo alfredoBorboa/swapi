@@ -1,0 +1,2 @@
+# swapi
+Solar Wind API

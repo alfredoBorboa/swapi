@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>SWAPI Jquery examples</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+  <h1>Check your console.</h1>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+
+    //EPAM call.
+    $( document ).ready( function(){
+    $.get( "http://www.solarwind.ml/api/epam/last/1", function( data ) { //This is the response part of your call to the API. Do whatever you like with the data.
+    //Remember that all of SWAPI's responses are JSON object arrays. Check your console
+    console.log( "EPAM reading: " );
+    console.log( data[0] );
+    });
+
+    //Mag call.
+    $.get( "http://www.solarwind.ml/api/mag/last/1", function( data ) { //This is the response part of your call to the API. Do whatever you like with the data.
+    //Remember that all of SWAPI's responses are JSON object arrays. Check your console
+    console.log( "Mag reading: " );
+    console.log( data[0] );
+    });
+
+    //SIS call.
+    $.get( "http://www.solarwind.ml/api/sis/last/1", function( data ) { //This is the response part of your call to the API. Do whatever you like with the data.
+    //Remember that all of SWAPI's responses are JSON object arrays. Check your console
+    console.log( "SIS reading: " );
+    console.log( data[0] );
+    });
+
+    //SWEPAM call.
+    $.get( "http://www.solarwind.ml/api/swepam/last/1", function( data ) { //This is the response part of your call to the API. Do whatever you like with the data.
+    //Remember that all of SWAPI's responses are JSON object arrays. Check your console
+    console.log( "SWEPAM reading: " );
+    console.log( data[0] );
+    });
+
+  });
+    </script>
+</body>
+
+</html>
